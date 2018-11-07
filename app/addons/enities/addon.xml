@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>enities</id>
+    <version>1.0</version>
+    <priority>1700</priority>
+    <position>0</position>
+    <status>active</status>
+    <default_language>en</default_language>
+    <auto_install>MULTIVENDOR</auto_install>
+
+    <queries>
+        <item>DROP TABLE IF EXISTS ?:enities;</item>
+        <item>
+            CREATE TABLE `?:enities` (
+              `enity_id` mediumint(8) unsigned NOT NULL DEFAULT '0',
+              `level` mediumint(8) DEFAULT '0',
+              `status` char(1) NOT NULL DEFAULT 'A',
+              PRIMARY KEY (`enity_id`)
+            ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+        </item>
+
+        <item>DROP TABLE IF EXISTS ?:enities_descriptions;</item>
+        <item>
+          CREATE TABLE `?:enities_descriptions` (
+          `enity_id` mediumint(8) unsigned NOT NULL DEFAULT '0',
+          `description` varchar(255) DEFAULT '',
+          `full_description` mediumtext DEFAULT '',
+          `prefix` varchar(128) DEFAULT '',
+          `suffix` varchar(128) DEFAULT '',
+          `lang_code` char(2) NOT NULL DEFAULT '',
+           PRIMARY KEY (`enity_id`,`lang_code`)
+            ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+        </item>
+        <item for="uninstall">
+            DROP TABLE IF EXISTS ?:enities;
+        </item>
+        <item for="uninstall">
+            DROP TABLE IF EXISTS ?:enities_descriptions;
+        </item>
+    </queries>
+</addon>

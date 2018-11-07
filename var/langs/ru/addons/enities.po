@@ -1,0 +1,30 @@
+msgid ""
+msgstr ""
+msgstr "Project-Id-Version: tygh\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
+
+msgctxt "Addons::name::enities"
+msgid "Localoki_enities"
+msgstr "Localoki сущности"
+
+msgctxt "Addons::description::enities_description"
+msgid "Add enities model in MULTIVENDOR"
+msgstr "Добавляет модель сущностей в MULTIVENDOR"
+
+msgctxt "Languages::enities"
+msgid "enities"
+msgstr "Сущности"
+
+msgctxt "Languages::enity"
+msgid "enity"
+msgstr "Сущность"
+
+msgctxt "Languages::enities_menu_description"
+msgid "enities_menu_description"
+msgstr "Управление сущностями"
+
+msgctxt "Languages::enities_manage"
+msgid "enities_manage"
+msgstr "Управление сущностями"

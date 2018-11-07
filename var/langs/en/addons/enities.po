@@ -1,0 +1,30 @@
+msgid ""
+msgstr ""
+msgstr "Project-Id-Version: tygh\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: English\n"
+"Language: en_US"
+
+msgctxt "Addons::name::enities"
+msgid "Localoki_enities"
+msgstr "Localoki enities"
+
+msgctxt "Addons::description::enities"
+msgid "Add enities model in MULTIVENDOR"
+msgstr "Add enities model in MULTIVENDOR"
+
+msgctxt "Languages::enities"
+msgid "enities"
+msgstr "Enities"
+
+msgctxt "Languages::enity"
+msgid "enity"
+msgstr "Enity"
+
+msgctxt "Languages::enities_menu_description"
+msgid "enities_menu_description"
+msgstr "Enities manage"
+
+msgctxt "Languages::enities_manage"
+msgid "enities_manage"
+msgstr "Enities managment"

@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<addon scheme="2.0">
+    <id>csc_full_page_cache</id>
+    <name>cs-commerce.com - Full page CACHE</name>
+    <description>Full page CACHE add-on. Developed by &lt;b&gt;&lt;a href="http://www.cs-commerce.com" target="_blank" &gt;www.cs-commerce.com&lt;/a&gt;&lt;/b&gt;</description>
+    <version>2.5</version>
+    <priority>900500</priority>
+    <position>0</position>
+    <status>active</status>
+	<default_language>en</default_language>	
+    <auto_install>MULTIVENDOR,ULTIMATE</auto_install>
+	<compatibility>       
+        <core_version>
+            <min>4.0.1</min>
+        </core_version>
+    </compatibility>
+	<settings>
+		<sections>
+		<section id="general">
+			<name>General</name>
+			<items>
+				<item id="others">
+					<name>Full page cache settings</name> 
+					<type>header</type>
+					<handler/>
+					<variants/>
+					<translations>                           
+						<item lang="ru">Настройки разделов кеширования</item>                           
+					</translations>
+				</item>
+				<item id="controllers">
+					<name>Select controllers to enable cache</name>            
+					<type>multiple select</type>					
+					<translations>                           
+						<item lang="ru">Включите кеширование для разделов сайта:</item>                           
+					</translations>			
+				</item>
+				<item id="cache_lifetime">
+					<name>Cache expiry time (hours). 0 - unlimited time.</name>            
+					<type>input</type>
+					<default_value>8</default_value>
+					<translations>                           
+						<item lang="ru">Время истечения кеша (часов). 0 - неограниченное время</item>           			
+					</translations>			
+				</item>
+				<item id="disable_for_auth">
+					<name>Disable cache for logged users</name>            
+					<type>checkbox</type>
+					<default_value>N</default_value>
+					<translations>                           
+						<item lang="ru">Отключить кеш для авторизованных пользователей</item>           			
+					</translations>			
+				</item>
+				<item id="compress_cache">
+					<name>Save cache on zip-archived files</name>            
+					<type>checkbox</type>
+					<default_value>N</default_value>
+					<translations>                           
+						<item lang="ru">Сохранять файлы кеша в виде Zip-архива</item>           			
+					</translations>			
+				</item>
+				<item id="no_cache_filters">
+					<name>Don't save to cache filters generated category pages</name>            
+					<type>checkbox</type>
+					<default_value>N</default_value>
+					<translations>                           
+						<item lang="ru">Не сохранять в кеш сгенерированные фильтрами страницы категорий</item>           			
+					</translations>			
+				</item>
+				<item id="mobile_devices">
+					<name>Create custom cache for mobile devices (use this feature if are you using 3rd part addons for custom appearance on mobile devices)</name>            
+					<type>checkbox</type>
+					<default_value>N</default_value>
+					<translations>                           
+						<item lang="ru">Генерировать отдельный кеш для мобильных устройств (включите данную функцию, если вы используете сторонние модули для кастомизации внешенего вида сайта для мобильных устройств)</item>           			
+					</translations>			
+				</item>		
+				<item id="rebuild_product_cache">
+					<name>On update product, rebuild Cache where this product was shown</name>            
+					<type>checkbox</type>
+					<default_value>Y</default_value>
+					<translations>                           
+						<item lang="ru">При обновлении товара, очищать кеш страниц, на которых присутствовал этот товар</item>           			
+					</translations>			
+				</item>
+				<item id="rebuild_create_product_cache">
+					<name>On create or delete product, rebuild all categories cache</name>            
+					<type>checkbox</type>
+					<default_value>Y</default_value>
+					<translations>                           
+						<item lang="ru">При создании или удалении товара, очищать весь кеш категорий</item>           			
+					</translations>			
+				</item>
+				<item id="rebuild_pages_cache">
+					<name>On update page clear pages cache</name>            
+					<type>checkbox</type>
+					<default_value>Y</default_value>
+					<translations>                           
+						<item lang="ru">При обновлении страницы, очищать сгенерированный кеш страниц</item>                  
+					</translations>			
+				</item>
+				<item id="rebuild_categories_cache">
+					<name>On update category clear categories cache</name>            
+					<type>checkbox</type>
+					<default_value>Y</default_value>
+					<translations>                           
+						<item lang="ru">При обновлении категории, очищать сгенерированный кеш категорий</item>                
+					</translations>			
+				</item>				
+				<item id="cron_key">
+					<name>Cron key</name>            
+					<type>input</type>
+					<default_value>JD630DS</default_value>
+					<translations>                           
+						<item lang="ru">Ключ запуска по CRON</item>                  
+					</translations>			
+				</item>
+				<item id="others_2">
+					<name>General information</name> 
+					<type>header</type>
+					<handler/>
+					<variants/>
+					<translations>                           
+						<item lang="ru">Общая информация</item>                           
+					</translations>
+				</item>
+				<item id="template">
+					<type>template</type>
+					<default_value>setup_desc.tpl</default_value>
+				</item>
+			</items>	
+		</section>
+		</sections>
+	</settings>
+	<translations>
+        <item for="name" lang="ru">cs-commerce.com - Полностраничное кеширование страниц сайта</item>
+       	<item for="description" lang="ru">Полное кеширование страниц сайта. Разработчик &lt;b&gt;&lt;a href="http://www.cs-commerce.com" target="_blank" &gt;www.cs-commerce.com&lt;/a&gt;&lt;/b&gt;</item>       
+    </translations>
+    <language_variables>
+        <item lang="en" id="_no_page">Page not found</item>
+		<item lang="ru" id="_no_page">Страница не найдена</item>
+		
+		<item lang="en" id="csc.cron_setup">Clear cache by Cron</item>
+		<item lang="ru" id="csc.cron_setup">Настройки для запуска очистки кеша по CRON</item>
+		
+		<item lang="en" id="csc.general_info_about_full_page_cache"><![CDATA[ Full caching of the pages of the site can significantly reduce the load on the server and speed up the response time of the server. When the addon "Full caching of site pages" is enabled, the server does not need to access the database and various blocks of the site every time to generate the page, it does this once, after which the next visitor gives the cached page. Full caching of pages on the site has an intelligent system for cleaning the cache of pages when updating the product, which clears the cache of the pages on which the product was displayed. Also you can set the time of the actuality of the generated cache. <b> When you clear the cache from the admin panel - The full cache of the pages will also be cleared !. <br/> Do not forget that full page caching requires more memory on your hard drive! <br> To pinpoint the cache on certain pages or to view the page without cache, add the no_cache parameter (http://site.com/?no_cache) to the url of the page.</ b> ]]></item>
+		<item lang="ru" id="csc.general_info_about_full_page_cache"><![CDATA[ Полное кеширование страниц сайта позволяет существенно снизить нагрузку на сервер и ускорить время ответа сервера. При включенном модуле "Полное кеширование страниц сайта" серверу не нужно каждый раз обращаться к базе данных и к различным блокам сайта для генерации страницы, он это делает один раз, после чего следующим посетителям отдает кешированную страницу. Полное кешиорвание страниц сайта имеет интеллектуальную систему очистке кеша страниц при обновлении товара, которая очищает кеш страниц, на которых данный товар выводился. Так же вы можете задать время актуальности сгенерированного кеша. Когда вы очищаете стандартный кеш - полностраничный кеш также будет полностью очищен.<br/>Не забывайте, что полное кеширование страниц сайта требует дополнительного объема памяти на жестком диске!</b><br>Для точечной очистки кеша на определнный страницах или для просмотра страницы без кеша добавьте в url страницы параметра no_cache (http://site.com/?no_cache) ]]></item>
+		
+		<item lang="en" id="csc.general_info_cron_setup">For full or partial clearing of the "Full cache" use the link with the parameters. If you only need to partially clear the cache, remove the corresponding controller names from the link. Parameter expired you can use to delete expired cache files.</item>
+		<item lang="ru" id="csc.general_info_cron_setup">Для полной или частичной очистки "Полного кеша" используйте ссылку с параметрами. Если нужна только частичная очистка кеша, удалите из ссылки соответствующие названия контроллеров. Параметр expired используется для очистке файлов кеша, срок которых уже истек.</item>
+		
+		<item lang="en" id="cfpc_clear__no_page">Cleare NO PAGE Full cache</item>
+		<item lang="ru" id="cfpc_clear__no_page">Очистить Полный Кеш Страницы 404</item>
+		
+		<item lang="en" id="cfpc_clear_index">Cleare Homepage Full cache</item>
+		<item lang="ru" id="cfpc_clear_index">Очистить Полный Кеш Главной страницы</item>
+		
+		<item lang="en" id="cfpc_clear_companies">Cleare Companies Full cache</item>
+		<item lang="ru" id="cfpc_clear_companies">Очистить Полный Кеш Страниц продавцов</item>
+		
+		<item lang="en" id="cfpc_clear_products">Cleare Products Full cache</item>
+		<item lang="ru" id="cfpc_clear_products">Очистить Полный Кеш Товаров</item>
+		
+		<item lang="en" id="cfpc_clear_categories">Cleare Categories Full cache</item>
+		<item lang="ru" id="cfpc_clear_categories">Очистить Полный Кеш Категорий</item>
+		
+		<item lang="en" id="cfpc_clear_pages">Cleare Pages Full cache</item>
+		<item lang="ru" id="cfpc_clear_pages">Очистить Полный Кеш Страниц</item>
+		
+		<item lang="en" id="cfpc_clear_all">Cleare ALL Full Cache</item>
+		<item lang="ru" id="cfpc_clear_all">Очистить весь Полный кеш</item>
+		
+		<item lang="en" id="fpc_exclude_cache">Exclude block from Full page cache</item>
+		<item lang="ru" id="fpc_exclude_cache">Исключить блок из полностраничного кешиорвания</item>
+		
+		<item lang="en" id="cfpc_clear_expired">Cleare Expired cache</item>
+		<item lang="ru" id="cfpc_clear_expired">Очистить Истекшие Файлы кеша</item>
+		
+		<item lang="en" id="fpc_deleted_expired_files">We have cleared [count] expired cache files!</item>
+		<item lang="ru" id="fpc_deleted_expired_files">Мы очистили [count] истекших файов кеша!</item>		
+		
+    </language_variables>
+		<queries>
+		<item>
+			CREATE TABLE `?:full_cache_files` (
+			  `file_id` mediumint(10) NOT NULL AUTO_INCREMENT,
+			  `controller` varchar(25) NOT NULL,
+			  `path` varchar(128) NOT NULL,
+			  `file_hash` char(12) NOT NULL,
+			  `timestamp` int(11) NOT NULL DEFAULT '0',
+			  PRIMARY KEY (`file_id`),
+			  UNIQUE KEY `file_hash` (`file_hash`),
+			  KEY `timestamp` (`timestamp`),
+			  KEY `controller` (`controller`)
+			) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+		</item>		
+		<item for="uninstall">DROP TABLE IF EXISTS `?:full_cache_files`;</item>
+		
+		<item>
+			CREATE TABLE `?:full_cache_files_products` (
+			  `file_id` mediumint(10) NOT NULL,
+			  `product_id` mediumint(8) NOT NULL,
+			  UNIQUE KEY `files_products` (`file_id`,`product_id`)
+			) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+		</item>		
+		<item for="uninstall">DROP TABLE IF EXISTS `?:full_cache_files_products`;</item>
+		
+		
+       
+        <item >ALTER TABLE  ?:bm_blocks ADD `fpc_exclude_cache` CHAR( 1 ) NOT NULL DEFAULT  'N'</item>
+        <item for="uninstall" >ALTER TABLE ?:bm_blocks DROP COLUMN `fpc_exclude_cache`</item>
+   	
+	</queries>
+	 <functions>
+	 	<item for="install">fn_csc_fpc_install</item>
+        <item for="uninstall">fn_csc_fpc_clear_full_cache</item>
+    </functions>	
+</addon>
